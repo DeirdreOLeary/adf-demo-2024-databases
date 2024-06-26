@@ -60,4 +60,10 @@
     <Folder Include="Schema\dbo" />
     <Folder Include="Schema\dbo\Tables" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema\dbo\Tables\Users.sql" />
+    <Build Include="Schema\dbo\Tables\Badges.sql" />
+    <Build Include="Schema\dbo\Tables\Posts.sql" />
+    <Build Include="Schema\dbo\Tables\PostTypes.sql" />
+  </ItemGroup>
 </Project>
