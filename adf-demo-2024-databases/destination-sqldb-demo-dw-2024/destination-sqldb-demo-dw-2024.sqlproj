@@ -67,5 +67,6 @@
     <Build Include="Schema\stg\Tables\Transformed_Data_User.sql" />
     <Build Include="Schema\stg\Tables\Source_Users.sql" />
     <Build Include="Schema\stg\Tables\Source_Badges.sql" />
+    <Build Include="Schema\stg\Tables\Transformed_Data_Post.sql" />
   </ItemGroup>
 </Project>
