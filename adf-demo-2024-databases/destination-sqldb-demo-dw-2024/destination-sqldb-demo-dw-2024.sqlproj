@@ -63,5 +63,6 @@
   <ItemGroup>
     <Build Include="Schema\stg\stg.sql" />
     <Build Include="Schema\stg\Tables\dimUser.sql" />
+    <Build Include="Schema\stg\Tables\factPost.sql" />
   </ItemGroup>
 </Project>
