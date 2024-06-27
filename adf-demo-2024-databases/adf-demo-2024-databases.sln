@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "source-StackOverflow2013", "source-StackOverflow2013\source-StackOverflow2013.sqlproj", "{A618DBA5-FE93-4965-84C6-D981E734E710}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "destination-sqldb-demo-dw-2024", "destination-sqldb-demo-dw-2024\destination-sqldb-demo-dw-2024.sqlproj", "{5083E518-37C0-4CD6-9263-9A0C0F304F35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,12 @@ Global
 		{A618DBA5-FE93-4965-84C6-D981E734E710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A618DBA5-FE93-4965-84C6-D981E734E710}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A618DBA5-FE93-4965-84C6-D981E734E710}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5083E518-37C0-4CD6-9263-9A0C0F304F35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5083E518-37C0-4CD6-9263-9A0C0F304F35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5083E518-37C0-4CD6-9263-9A0C0F304F35}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5083E518-37C0-4CD6-9263-9A0C0F304F35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5083E518-37C0-4CD6-9263-9A0C0F304F35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5083E518-37C0-4CD6-9263-9A0C0F304F35}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
