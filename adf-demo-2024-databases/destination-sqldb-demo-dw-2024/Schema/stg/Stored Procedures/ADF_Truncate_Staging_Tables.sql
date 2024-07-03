@@ -9,14 +9,25 @@ Activity:
 ***********************************************************************************************/
 CREATE PROCEDURE [stg].[ADF_Truncate_Staging_Tables]
 AS
-	/* Truncate all Source tables */
-	TRUNCATE TABLE [stg].[Source_Badges];
-	TRUNCATE TABLE [stg].[Source_Posts];
-	TRUNCATE TABLE [stg].[Source_PostTypes];
-	TRUNCATE TABLE [stg].[Source_Users];
+    SET NOCOUNT ON;
 
-	/* Truncate all Transformed_Data tables */
-	TRUNCATE TABLE [stg].[Transformed_Data_Post];
-	TRUNCATE TABLE [stg].[Transformed_Data_User];
+    BEGIN TRY
+
+        /* Truncate all Source tables */
+		TRUNCATE TABLE [stg].[Source_Badges];
+		TRUNCATE TABLE [stg].[Source_Posts];
+		TRUNCATE TABLE [stg].[Source_PostTypes];
+		TRUNCATE TABLE [stg].[Source_Users];
+
+		/* Truncate all Transformed_Data tables */
+		TRUNCATE TABLE [stg].[Transformed_Data_Post];
+		TRUNCATE TABLE [stg].[Transformed_Data_User];
+
+    END TRY
+    BEGIN CATCH
+
+        ;THROW
+
+    END CATCH
 
 GO
