@@ -61,6 +61,7 @@
     <Folder Include="Schema\stg\Tables" />
     <Folder Include="Schema\data" />
     <Folder Include="Schema\data\Tables" />
+    <Folder Include="Schema\stg\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\stg\stg.sql" />
@@ -75,5 +76,6 @@
     <Build Include="Schema\data\data.sql" />
     <Build Include="Schema\data\Tables\dimUser.sql" />
     <Build Include="Schema\data\Tables\factPost.sql" />
+    <Build Include="Schema\stg\Stored Procedures\ADF_Truncate_Staging_Tables.sql" />
   </ItemGroup>
 </Project>
