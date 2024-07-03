@@ -78,5 +78,6 @@
     <Build Include="Schema\data\Tables\factPost.sql" />
     <Build Include="Schema\stg\Stored Procedures\ADF_Truncate_Staging_Tables.sql" />
     <Build Include="Schema\stg\Stored Procedures\ADF_Transform_dimUser.sql" />
+    <Build Include="Schema\stg\Stored Procedures\ADF_Transform_factPost.sql" />
   </ItemGroup>
 </Project>
