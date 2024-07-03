@@ -59,6 +59,8 @@
     <Folder Include="Schema" />
     <Folder Include="Schema\stg" />
     <Folder Include="Schema\stg\Tables" />
+    <Folder Include="Schema\data" />
+    <Folder Include="Schema\data\Tables" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\stg\stg.sql" />
@@ -70,5 +72,8 @@
     <Build Include="Schema\stg\Tables\Transformed_Data_Post.sql" />
     <Build Include="Schema\stg\Tables\Source_PostTypes.sql" />
     <Build Include="Schema\stg\Tables\Source_Posts.sql" />
+    <Build Include="Schema\data\data.sql" />
+    <Build Include="Schema\data\Tables\dimUser.sql" />
+    <Build Include="Schema\data\Tables\factPost.sql" />
   </ItemGroup>
 </Project>
