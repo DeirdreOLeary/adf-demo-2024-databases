@@ -3,6 +3,7 @@
     [CommentCount] INT      NULL,
     [CreationDate] DATETIME NOT NULL,
     [OwnerUserKey] INT      NULL,
+    [PostTypeKey]  INT      NOT NULL,
     [Score]        INT      NOT NULL,
-    [ViewCount]    INT      NOT NULL,
+    [ViewCount]    INT      NOT NULL
 );
