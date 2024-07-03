@@ -12,6 +12,43 @@ AS
     SET NOCOUNT ON;
 
     BEGIN TRY
+
+        /* The dimUser table needs to always hold a default "zero" record for No User.
+           If it doesn't exist, insert it. */
+        IF NOT EXISTS (
+            SELECT * 
+            FROM [stg].[dimUser]
+            WHERE [UserId] = 0
+        )
+        BEGIN
+            
+            SET IDENTITY_INSERT [stg].[dimUser] ON;
+
+            INSERT INTO [stg].[dimUser] (
+                [UserId],
+                [VersionStartDate],
+	            [VersionEndDate],
+	            [Version],
+	            [IsActive],
+                [UserKey],
+                [DisplayName],
+                [Reputation]
+            )
+            VALUES (
+                0,            /* [UserId] */
+                '2020-01-01', /* [VersionStartDate] 
+                                 This should be before the earliest data so it is valid for the lifetime of the data warehouse */
+                DEFAULT,      /* [VersionEndDate] */
+                DEFAULT,      /* [Version] */
+                1,            /* [IsActive] */
+                0,            /* [UserKey] */
+                'No User',    /* [DisplayName] */
+                0             /* [Reputation] */
+            );
+
+            SET IDENTITY_INSERT [stg].[dimUser] OFF;
+
+        END
         
         /* Use CTEs to get the details of the latest badge awarded to each user.
            We could also create a view for this. */
