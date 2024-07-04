@@ -24,7 +24,7 @@ AS
         )
         SELECT p.[Key] AS [PostKey],
             ISNULL(u.[UserId], 0) AS [OwnerUserId],
-                /* Where there is no Owner User, set the Id to the default of 0 */
+                /* Where there is no Owner User, set the Id to the default of 0. */
             p.[CreationDate],
             p.[Score],
             p.[ViewCount],
@@ -33,10 +33,32 @@ AS
         INNER JOIN [stg].[Source_PostTypes] pt
         ON p.[PostTypeKey] = pt.[Key]
         LEFT OUTER JOIN [data].[dimUser] u
-        ON p.[OwnerUserKey] = u.[UserKey]
+        ON p.[OwnerUserKey] = u.[UserKey]    
+            /* The following is required to handle the SCDs (Type 2) where 
+               the Post's creation date indicates which version of the User it is owned by. */
+            AND (
+                (
+                    u.[Version] = 1
+                    AND p.[CreationDate] < u.[VersionEndDate]
+                )
+                OR (
+                    u.[Version] > 1
+                    AND p.[CreationDate] >= u.[VersionStartDate]
+                    AND p.[CreationDate] < u.[VersionEndDate]
+                )
+            )
         WHERE pt.[Type] = 'Answer';
 
-        /* Identify which Posts are updates, rather than new rows. */
+        /* Identify which Posts are new rows. */
+        UPDATE tdp
+        SET [IsNewRow] = 1
+        FROM [stg].[Transformed_Data_Post] tdp
+        WHERE tdp.[PostKey] NOT IN (
+            SELECT p.[PostKey]
+            FROM [data].[factPost] p
+        );
+
+        /* Identify which Posts are updates. */
         UPDATE tdp
         SET [IsUpdate] = 1
         FROM [stg].[Transformed_Data_Post] tdp

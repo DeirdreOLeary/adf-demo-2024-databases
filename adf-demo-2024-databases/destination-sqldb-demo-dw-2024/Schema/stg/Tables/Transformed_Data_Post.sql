@@ -5,6 +5,7 @@
     [Score]        INT          NOT NULL,
     [ViewCount]    INT          NOT NULL,
     [CommentCount] INT          NULL,
+    [IsNewRow]     BIT          DEFAULT 0 NOT NULL,
     [IsUpdate]     BIT          DEFAULT 0 NOT NULL
     CONSTRAINT [UC_Transformed_Data_Post] UNIQUE ([PostKey])
 );
