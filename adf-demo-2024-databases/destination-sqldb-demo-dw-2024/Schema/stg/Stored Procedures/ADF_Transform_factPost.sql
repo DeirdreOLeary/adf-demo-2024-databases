@@ -32,7 +32,7 @@ AS
         FROM [stg].[Source_Posts] p
         INNER JOIN [stg].[Source_PostTypes] pt
         ON p.[PostTypeKey] = pt.[Key]
-        LEFT OUTER JOIN [stg].[dimUser] u
+        LEFT OUTER JOIN [data].[dimUser] u
         ON p.[OwnerUserKey] = u.[UserKey]
         WHERE pt.[Type] = 'Answer';
 
@@ -40,7 +40,7 @@ AS
         UPDATE tdp
         SET [IsUpdate] = 1
         FROM [stg].[Transformed_Data_Post] tdp
-        INNER JOIN [stg].[factPost] p
+        INNER JOIN [data].[factPost] p
         ON tdp.[PostKey] = p.[PostKey]
             AND (
                 tdp.[OwnerUserId] <> p.[OwnerUserId]
