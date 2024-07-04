@@ -39,7 +39,7 @@ AS
                 )
                 VALUES (
                     0,            /* [UserId] */
-                    '2020-01-01', /* [VersionStartDate] should be before the earliest data 
+                    '1900-01-01', /* [VersionStartDate] should be before the earliest data 
                                      so it is valid for the lifetime of the data warehouse */
                     DEFAULT,      /* [VersionEndDate] */
                     DEFAULT,      /* [Version] */
