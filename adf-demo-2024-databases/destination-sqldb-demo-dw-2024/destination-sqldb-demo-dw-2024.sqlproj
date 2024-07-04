@@ -78,5 +78,6 @@
     <Build Include="Schema\stg\Stored Procedures\ADF_Transform_dimUser.sql" />
     <Build Include="Schema\stg\Stored Procedures\ADF_Transform_factPost.sql" />
     <Build Include="Schema\stg\Stored Procedures\ADF_Load_dimUser.sql" />
+    <Build Include="Schema\stg\Stored Procedures\ADF_Load_factPost.sql" />
   </ItemGroup>
 </Project>
