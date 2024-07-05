@@ -73,7 +73,8 @@ AS
                 OR ISNULL(tdu.[DateLatestBadgeAwarded], '99991231') <> ISNULL(u.[DateLatestBadgeAwarded], '99991231')
                     /* Nullable columns need to have default values to allow for comparison, 
                        e.g. an emtpy string or highly unlikely date. */
-            );
+            )
+        WHERE u.[IsActive] = 1;
 
     END TRY
     BEGIN CATCH
