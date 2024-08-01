@@ -2,9 +2,9 @@
 Purpose:	This stored proc is called by the Azure Data Factory ETL process to truncate all 
 			staging Source & Transformed_Data tables in the data warehouse's stg schema.
 
-Pipeline:	
+Pipeline:	pl_etl_dims (adf-demo-2024-01)
 
-Activity:	
+Activity:	Truncate staging tables
 
 ***********************************************************************************************/
 CREATE PROCEDURE [stg].[ADF_Truncate_Staging_Tables]
