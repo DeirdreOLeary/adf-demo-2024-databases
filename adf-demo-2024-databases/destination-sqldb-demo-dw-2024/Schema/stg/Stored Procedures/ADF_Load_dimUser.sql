@@ -2,9 +2,9 @@
 Purpose:	This stored proc is called by the Azure Data Factory ETL process to load data 
 			from the staging Transformed_Data_dimUser table to the data.dimUser table.
 
-Pipeline:	
+Pipeline:	pl_etl_dims (adf-demo-2024-01)
 
-Activity:	
+Activity:	Load dimUser
 
 ***********************************************************************************************/
 CREATE PROCEDURE [stg].[ADF_Load_dimUser]

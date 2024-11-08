@@ -2,9 +2,9 @@
 Purpose:	This stored proc is called by the Azure Data Factory ETL process to transform data 
 			from the staging Source tables to the Transformed_Data_dimUser table as SCDs Type 2.
 
-Pipeline:	
+Pipeline:	pl_etl_dims (adf-demo-2024-01)
 
-Activity:	
+Activity:	Transform User data
 
 ***********************************************************************************************/
 CREATE PROCEDURE [stg].[ADF_Transform_dimUser]

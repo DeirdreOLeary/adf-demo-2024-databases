@@ -2,9 +2,9 @@
 Purpose:	This stored proc is called by the Azure Data Factory ETL process to load data 
 			from the staging Transformed_Data_factPost table to the data.factPost table.
 
-Pipeline:	
+Pipeline:	pl_etl_facts (adf-demo-2024-01)
 
-Activity:	
+Activity:	Load factPost
 
 ***********************************************************************************************/
 CREATE PROCEDURE [stg].[ADF_Load_factPost]

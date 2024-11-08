@@ -2,9 +2,9 @@
 Purpose:	This stored proc is called by the Azure Data Factory ETL process to transform data 
 			from the staging Source tables to the Transformed_Data_factPost table.
 
-Pipeline:	
+Pipeline:	pl_etl_facts (adf-demo-2024-01)
 
-Activity:	
+Activity:	Transform Post data
 
 ***********************************************************************************************/
 CREATE PROCEDURE [stg].[ADF_Transform_factPost]
